@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>天猫注册</title>
+		<link rel="logo icon" href="favicon.ico" />
+		<link rel="stylesheet" href="css/demo.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/Registration.css" />
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/Registration.js" ></script>
+	</head>
+	
+	<body>
+		<div class="nav t">
+			<ul class="navbt">
+				<li class="navli l"></li>
+				<li class="navli l">
+					<div class="cr">1</div>
+					<span class="navtxt">设置用户名</span>
+				</li>
+				<li class="navli l">
+					<div class="cr cr2">2</div>
+					<span class="navtxt navtxt2">填写账户信息</span>
+				</li>
+				<li class="navli l">
+					<div class="cr cr2">3</div>
+					<span class="navtxt navtxt2">设置支付方式</span>
+				</li>
+				<li class="navli l">
+					<div class="cr cr2">√</div>
+					<span class="navtxt navtxt2">注册成功</span>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+		<!--同意协议书-->
+		<div class="box t">
+			<!--手机号验证-->
+			<div class="phone">
+				<div class="phonenum">
+					<span class="phonetxt">手机号 </span>
+					<select class="num" name="home" size="0">
+						<!--selected="selected"-->
+						<option value="1" selected="selected">中国大陆        +86</option>
+						<option value="2">中国台湾地区       +86</option>
+						<option value="3">中国香港        +886</option>
+						<option value="4">马来西亚        +60</option>
+						<option value="5">新加坡        +65</option>
+						<option value="6" >日本        +81</option>
+				</select>
+				<input id="num2" class="num2" type="text" placeholder="  请输入你的手机号码"/>
+				<span id="tip" class="tip">✖手机号码格式不正确，请重新输入</span>
+				<p class="phonetxt2">验证</p>
+				<div class="verbox">
+					<div id="box" onselectstart="return false;">
+				        <div class="bgColor"></div>
+				        <div class="txt" >请按住滑块，拖动到最右边</div>
+				        <!--给i标签添加上相应字体图标的类名即可-->
+				        <div class="slider"><i class="iconfont icon-arrow_right"></i></div>
+				    </div>  
+				</div>	
+				<div class="btn">下一步</div>
+				</div>
+			</div>
+			
+			<div class="boxtxt">
+				<span class="lftxt">注册协议</span>
+				<a href="index.html"><span class="rttxt">╳</span></a>
+				<p class="zhtxt"><strong>【审慎阅读】</strong>您在申请注册流程中点击同意前，应当认真阅读以下协议。
+					<b style="text-decoration: underline;"><strong>请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：</strong></b>
+				</p>
+				<ul class="zhtxt2">
+					<li class="litxt">1、<b style="text-decoration: underline;"><strong>与您约定免除或限制责任的条款；</strong></b></li>
+					<li class="litxt">2、<b style="text-decoration: underline;"><strong>与您约定法律适用和管辖的条款；</strong></b></li>
+					<li class="litxt">3、<b style="text-decoration: underline;"><strong>其他以粗体下划线标识的重要条款。</strong></b></li>
+					<li class="litxt">如您对协议有任何疑问，可向平台客服咨询。</li>
+				</ul>
+				<p class="zhtxt zhtxt3">
+					<strong>【特别提示】</strong>当您按照注册页面提示填写信息、阅读并同意协议且完成全部注册程序后，即表示您已充分阅读、理解并接受协议的全部内容。如您因平台服务与淘宝发生争议的，适用《淘宝平台服务协议》处理。如您在使用平台服务过程中与其他用户发生争议的，依您与其他用户达成的协议处理。
+				</p>
+				<p class="zhtxt4"><strong>阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。</strong></p>
+				<ul class="latxt">
+					<li class="litxt"><a href="#">淘宝平台服务协议</a></li>
+					<li class="litxt"><a href="#">隐私权政策</a></li>
+					<li class="litxt"><a href="#">法律声明</a></li>
+					<li class="litxt"><a href="#">支付宝及客户端服务协议</a></li>
+				</ul>
+				<button id="btn" type="button">同意协议</button>
+			</div>
+		</div>
+		
+		<!--小蜜蜂-->
+		<div class="beebox">
+			<div class="beetu" ></div>
+			<div class="beetxt">
+				<ul class="beeul">
+					<li class="beeli">淘宝账户名是指什么？</li>
+					<li class="beeli">忘记会员名，怎么找回？</li>
+					<li class="beeli">忘记淘宝账号密码，怎么找回？</li>
+					<li class="beeli">手机（停机、丢失等）收不到验证码，怎么办？</li>
+					<li class="beeli">手机、邮箱正常使用，但是接收不到验证码，怎么办？</li>
+				</ul>
+				<div class="que">
+					<button class="quebtu" type="button">
+						<span>点我提问</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script>
+			var oPhone =document.getElementById('num2');
+			var oTip=document.getElementById('tip');
+			//电话正则表达式判断
+			oPhone.onblur = function(){
+//				alert("aaa")
+				var phone = oPhone.value;
+				var phoneReg = /^1[3|4|5|8][0-9]\d{4,8}$/;  //完整的11位手机号或者正确的手机号前七位
+				if(phoneReg.test(phone)==false){
+					oTip.style.color='red';						
+				}else{
+					oTip.style.color='white';
+				}
+				
+			}
+		</script>
+		
+		
+		
+	</body>
+</html>
